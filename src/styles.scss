@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Import Bootstrap source files
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Work Sans' sans-serif;
+    font-weight: 300;
+    background-color: #e4e5e6;
+    overflow: hidden;
+    .container {
+        margin-top: 1.5%;
+    }
+}
