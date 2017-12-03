@@ -10,7 +10,7 @@ export class ElectronService {
 
   ipcRenderer: typeof ipcRenderer;
   childProcess: typeof childProcess;
-
+  store: any;
   constructor() {
     // Conditional imports
     if (this.isElectron()) {
@@ -23,4 +23,11 @@ export class ElectronService {
     return window && window.process && window.process.type;
   }
 
+  get(param: string) {
+    return window.localStorage.getItem(param);
+  }
+
+  set(params: string, value: string) {
+    window.localStorage.setItem(params, value);
+  }
 }

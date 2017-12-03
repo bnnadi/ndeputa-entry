@@ -25,16 +25,16 @@ export class HttpService extends Http {
 
     get(url: string, options?: RequestOptionsArgs): Observable<any> {
 
-              return super.get(this.getFullUrl(url), this.requestOptions(options))
-                      .catch(this.onCatch)
-                      .do((res: Response) => {
-                          this.onSuccess(res.json());
-                      }, (error: any) => {
-                          this.onError(error);
-                      })
-                      .finally(() => {
-                          this.onEnd();
-                      })
+        return super.get(this.getFullUrl(url), this.requestOptions(options))
+                .catch(this.onCatch)
+                .do((res: Response) => {
+                    this.onSuccess(res.json());
+                }, (error: any) => {
+                    this.onError(error);
+                })
+                .finally(() => {
+                    this.onEnd();
+                })
           }
 
     post(url: string, body: Object, options?: RequestOptionsArgs): Observable<any> {

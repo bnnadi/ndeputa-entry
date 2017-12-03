@@ -2,9 +2,9 @@
     <div class="card border-primary mb-3">
         <div class="card-body">
             <p class="text-center">Please enter your Applicaition Key, to access this application.</p>
-            <form>
+            <form #authForm="ngForm" (ngSubmit)="authorize(authForm.value)">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="key" placeholder="Api Key">
+                    <input type="text" class="form-control" name="key" id="key" placeholder="Api Key" ngModel>
                 </div>
                 <button class="btn btn-lg btn-block btn-primary">Submit</button>
             </form>

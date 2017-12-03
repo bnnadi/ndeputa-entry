@@ -6,23 +6,23 @@
                 <form #clockForm="ngForm" (ngChange)="clock(clockForm.value)">
                     <div class="form-group">
                         <label for="company">Company</label>
-                        <input type="text" class="form-control" id="company" placeholder="Company">
+                        <input type="text" class="form-control" id="company" placeholder="Company" name="company" ngModel>
                     </div>
                     <div class="form-group">
                         <label for="firstname">First Name</label>
-                        <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                        <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname" ngModel>
                     </div>
                     <div class="form-group">
                         <label for="lastname">Last Name</label>
-                        <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                        <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname" ngModel>
                     </div>
                     <div class="form-group">
                         <label for="timein">Time In</label>
-                        <input type="datetime-local" class="form-control" id="timein" placeholder="Time In">
+                        <input type="datetime-local" class="form-control" id="timein" placeholder="Time In" name="timein" ngModel>
                     </div>
                     <div class="form-group">
                         <label for="timeout">Time Out</label>
-                        <input type="datetime-local" class="form-control" id="timeout" placeholder="Time Out">
+                        <input type="datetime-local" class="form-control" id="timeout" placeholder="Time Out" name="timeout" ngModel>
                     </div>
                 </form>
             </div>

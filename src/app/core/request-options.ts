@@ -1,4 +1,4 @@
-import { BaseRequestOptions } from '@angular/http';
+import { BaseRequestOptions, URLSearchParams } from '@angular/http';
 
 export class CustomReqeustOptions extends BaseRequestOptions {
 
@@ -8,10 +8,11 @@ export class CustomReqeustOptions extends BaseRequestOptions {
 
         super();
 
-            const apiKey = localStorage.getItem('apiKey');
-            this.apiKey = apiKey;
-            this.headers.append('Content-Type', 'application/json');
-            this.headers.append('Authorization', 'JWT ' + this.apiKey);
+        this.apiKey = window.localStorage.getItem('apikey');
+        this.headers.append('Content-Type', 'application/json');
+        console.log(this);
+        this.params = new URLSearchParams();
+        this.params.set('key', this.apiKey)
     }
 
 }

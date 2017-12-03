@@ -2,8 +2,6 @@
   <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/zEig29HrXXTTPEH8HY8Qmk5p/maximegris/angular-electron.svg' />
 </a>
 
-[![Angular Logo](./logo-angular.jpg)](https://angular.io/) [![Electron Logo](./logo-electron.jpg)](https://electron.atom.io/)
-
 
 [![Travis Build Status][build-badge]][build]
 [![Dependencies Status][dependencyci-badge]][dependencyci]
@@ -56,12 +54,12 @@ npm install -g @angular/cli
 
 ## To build for development
 
-- **in a terminal window** -> npm start  
+- **in a terminal window** -> npm start
 
 Voila! You can use your Angular + Electron app in a local development environment with hot reload !
 
-The application code is managed by `main.ts`. In this sample, the app runs with a simple Electron window and "Developer Tools" is open.  
-The Angular component contains an example of Electron and NodeJS native lib import. See [Use NodeJS Native libraries](#use-nodejs-native-libraries) charpter if you want to import other native libraries in your project.  
+The application code is managed by `main.ts`. In this sample, the app runs with a simple Electron window and "Developer Tools" is open.
+The Angular component contains an example of Electron and NodeJS native lib import. See [Use NodeJS Native libraries](#use-nodejs-native-libraries) charpter if you want to import other native libraries in your project.
 You can desactivate "Developer Tools" by commenting `win.webContents.openDevTools();` in `main.ts`.
 
 ## To build for production
